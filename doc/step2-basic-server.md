@@ -1,8 +1,18 @@
 # Step 2: Basic HTTP Server with Graceful Shutdown
 
 **Branch:** [`step2-basic-server`](https://github.com/lentregu/gh-autoresponder/tree/step2-basic-server)  
-**Previous Step:** [Step 1: Project Setup](step1-readme.md)  
-**Next Step:** [Step 3: Webhook Endpoint](#) *(Coming Soon)*
+**Created Files:**
+- `cmd/server/main.go`
+- `internal/server/server.go`
+- `step2-basic-server.md`
+
+## 🧭 Tutorial Navigation
+
+| Previous | Next |
+|----------|------|
+| [Step 1: Setup and Readme →](step1-readme.md) | [Step 3: Webhook Endpoint →](step3-webhook-endpoint.md) |
+
+
 
 ## 🏗 Implementation Overview
 
