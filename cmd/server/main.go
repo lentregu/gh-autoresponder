@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/lentregu/gh-autoresponder/internal/server"
+	"github.com/lentregu/gh-autoresponder/internal/webhook"
 )
 
 func main() {
@@ -11,6 +12,8 @@ func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	log.Println("Starting application...")
 
-	srv := server.New("8080")
+	issueHandler := webhook.NewIssueHandler()
+
+	srv := server.New("8080", issueHandler)
 	srv.Start()
 }

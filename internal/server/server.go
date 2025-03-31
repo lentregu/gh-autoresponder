@@ -16,11 +16,13 @@ type Server struct {
 	shutdown   chan os.Signal
 }
 
-func New(port string) *Server {
+func New(port string, issueHandler http.Handler) *Server {
+	router := setupRouter(issueHandler)
 
 	return &Server{
 		httpServer: &http.Server{
-			Addr: ":" + port,
+			Addr:    ":" + port,
+			Handler: router,
 		},
 		shutdown: make(chan os.Signal, 1),
 	}
